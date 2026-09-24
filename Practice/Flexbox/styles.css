@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.box {
+    padding: 10px;
+    background-color: aqua;
+    text-align: center;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+}
