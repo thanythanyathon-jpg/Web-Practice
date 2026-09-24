@@ -1,0 +1,16 @@
+	<!-- เขียนฟอร์มติดต่อที่มีช่องกรอก "ชื่อเล่น" (บังคับกรอก, ห้ามว่าง) และ "อายุ" (ต้องเป็นตัวเลขระหว่าง 1–100 เท่านั้น) พร้อมปุ่ม Submit -->
+<!doctype html>
+<html lang="EN">
+  <head>
+    <title>Form</title>
+  </head>
+  <body>
+    <form>
+      <label>Your name: </label>
+      <input type="text" id="name" required /><br />
+      <label>Your age: </label>
+      <input type="text" id="age" min="1" max="100" /><br />
+      <button type="submit">submit</button>
+    </form>
+  </body>
+</html>
