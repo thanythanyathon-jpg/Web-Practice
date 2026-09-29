@@ -1,0 +1,30 @@
+<!-- เขียนโค้ดใช้ for loop พิมพ์เลข 1 ถึง 30 โดย:
+
+ถ้าหารด้วย 3 ลงตัว → พิมพ์ "Fizz"
+ถ้าหารด้วย 5 ลงตัว → พิมพ์ "Buzz"
+ถ้าหารด้วยทั้ง 3 และ 5 ลงตัว → พิมพ์ "FizzBuzz"
+ไม่งั้นพิมพ์ตัวเลขปกติ -->
+<!doctype html>
+<html lang="EN">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+        for (let i = 1; i <= 30; i++) {
+            if ((i % 3 == 0) && (i % 5 == 0)) {
+                console.log("FizzBuzz");
+            }
+            else if (i % 3 == 0) {
+                console.log("Fizz");
+            }
+            else if (i % 5 == 0) {
+                console.log("Buzz")
+            }
+            else {
+                console.log(i)
+            }
+        }
+    </script>
+  </body>
+</html>

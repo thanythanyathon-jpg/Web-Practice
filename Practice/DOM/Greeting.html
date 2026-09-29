@@ -1,0 +1,33 @@
+<!-- มี <input id="name"> กับ <button id="greet"> และ <p id="output"></p>
+เขียน JavaScript ให้เมื่อกดปุ่ม greet แล้ว output แสดงข้อความ "สวัสดี [ชื่อที่กรอก]" — ถ้าไม่กรอกอะไรเลยให้ขึ้น alert เตือนแทน -->
+<!doctype html>
+<html lang="EN">
+  <head>
+    <title>Hello</title>
+  </head>
+  <body>
+    <div>
+        Input your name:
+        <input type="text" id="name">
+        <button id="greet">greet</button>
+    </div>
+
+    <p id="output"></p>
+
+    <script>
+        const input = document.getElementById("name");
+        const greet = document.getElementById("greet");
+        const output = document.getElementById("output");
+
+        greet.addEventListener("click", function(){
+            
+            if (input.value.trim().length === 0) {
+                alert("Please enter your name.")
+                return;
+            }
+
+            output.innerHTML = "Hello, " + input.value;
+        });
+    </script>
+  </body>
+</html>
