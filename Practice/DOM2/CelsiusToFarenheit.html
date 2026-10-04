@@ -1,0 +1,33 @@
+<!-- มี <input id="celsius">, <button id="convertBtn">, และ <p id="result"></p>
+เขียน JavaScript ให้เมื่อกดปุ่ม convertBtn แล้ว result แสดงผลอุณหภูมิที่แปลงจากเซลเซียสเป็นฟาเรนไฮต์ (สูตร: F = C × 9/5 + 32) — ถ้าผู้ใช้กรอกค่าที่ไม่ใช่ตัวเลข ให้ขึ้น alert เตือนแทน -->
+<!doctype html>
+<html lang="EN">
+  <head>
+    <title>Celcius to Farenheit Calculator</title>
+  </head>
+  <body>
+    <div>
+        Enter your Celsius:
+        <input type="number" id="celsius">
+        <button id="convertBtn">Convert</button>
+    </div>
+    <p id="result"></p>
+
+    <script>
+        const inputCelsius = document.getElementById("celsius");
+        const btn = document.getElementById("convertBtn");
+        const result = document.getElementById("result");
+
+        btn.addEventListener("click" , function() {
+            if (inputCelsius.value.trim().length === 0 || isNaN(inputCelsius.value)) {
+                alert("Please enter your celsius.")
+                return;
+            }
+
+            let farenheit = inputCelsius.value * 9 / 5 + 32;
+
+            result.innerHTML = "Your Farenheit is " + farenheit;
+        });
+    </script>
+  </body>
+</html>

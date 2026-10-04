@@ -1,0 +1,25 @@
+<!-- เขียนฟังก์ชัน findMax(arr) รับ array ตัวเลข แล้วคืนค่าตัวที่มากที่สุดในอาเรย์ ห้ามใช้ Math.max() ให้ใช้ loop เขียนเอง -->
+<!DOCTYPE html>
+<head>
+<title>Max Array</title>
+</head>
+<body>
+
+<script>
+    function findMax(arr) {
+        let max = arr[0]
+        for (let i = 0; i < arr.length; i ++){
+            if (arr[i] > max){
+                max = arr[i]
+            }
+
+            console.log("Current Number: " + arr[i])
+            console.log("Current Max: " + max)
+        }
+        return max;
+    }
+
+    console.log(findMax([12, 44, 34, 66, 77, 93, 17, 35]));
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!-- มีปุ่ม #sortBtn และ array let scores = [88, 45, 76, 92, 60];
+เขียนให้เมื่อกดปุ่ม array ถูกเรียงจากมากไปน้อย แล้วแสดงผลลัพธ์ทั้งหมดใน <p id="result"> คั่นด้วยจุลภาค -->
+<!doctype html>
+<html lang="EN">
+  <head>
+    <title>Hello</title>
+  </head>
+  <body>
+    <div>
+        Input your numbers:
+        <input type="text" id="number" placeholder="Ex. 12,43,76,23,55"><br>
+        <button id="sortbtn">Sort</button>
+    </div>
+
+    <p id="output"></p>
+
+    <script>
+        const number = document.getElementById("number");
+        const btn = document.getElementById("sortbtn");
+        const output = document.getElementById("output");
+
+        btn.addEventListener("click", function(){
+            const input =  number.value.split(",").map(Number);
+            console.log("Your numbers is: " + input);
+            
+            input.sort(function(a, b) { return b - a; })
+
+            output.innerHTML = "Your sorted number is: " + input.join(", ")
+        });
+    </script>
+  </body>
+</html>

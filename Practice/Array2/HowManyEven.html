@@ -1,0 +1,23 @@
+<!-- เขียนฟังก์ชัน countEven(arr) รับ array ตัวเลข แล้วคืนค่าจำนวนตัวเลขคู่ในอาเรย์นั้น (ไม่ใช่คืนค่าตัวเลขคู่ แต่คืนว่ามีกี่ตัว) ใช้ loop เขียนเอง -->
+<!doctype html>
+<html lang="EN">
+  <head>
+    <title>Even Count</title>
+  </head>
+  <body>
+    <script>
+        function countEven(arr) {
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 == 0) {
+                    count++
+                }
+            }
+            console.log("Your number is " + arr.join(", "));
+            return "There is " + count + " even numbers.";
+        }
+
+        console.log(countEven([12, 23, 44, 66 ,54, 76 ,88, 21, 33]));
+    </script>
+  </body>
+</html>
