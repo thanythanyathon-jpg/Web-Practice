@@ -1,2 +1,2 @@
 # Web-Practice
-This is the place where I upload my html, css and JavaScript.
+A workspace for my HTML, CSS, and JavaScript practice.
